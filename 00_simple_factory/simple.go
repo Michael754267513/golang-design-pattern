@@ -8,6 +8,7 @@ type API interface {
 }
 
 //NewAPI return Api instance by type
+// 当instance书很多的时候需要大量判断，维护也会相对困难
 func NewAPI(t int) API {
 	if t == 1 {
 		return &hiAPI{}
